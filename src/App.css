@@ -1,0 +1,87 @@
+
+.button-load-data{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Cambia el color de fondo a uno que te guste */
+  color: #fff; /* Cambia el color del texto a blanco o uno que prefieras */
+  border: none;
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición de color de fondo suave al pasar el mouse */
+  margin-top: 20px;
+  margin-left: 20px
+}
+.button-load-data:hover {
+  background-color: #2980b9; /* Cambia el color de fondo cuando se pasa el mouse */
+}
+
+.title {
+  font-size: 50px; /* Cambia el tamaño de fuente según tus preferencias */
+  color: #3498db; /* Cambia el color de texto a uno que te guste */
+  text-align: center; /* Centra el texto horizontalmente */
+  /* Otros estilos personalizados que desees */
+}
+
+.title-load-dataset {
+  font-size: 30px; /* Cambia el tamaño de fuente según tus preferencias */
+  color: #3498db; /* Cambia el color de texto a uno que te guste */
+  margin-left: 20px
+  /* Otros estilos personalizados que desees */
+}
+
+.file-selector {
+  width: 200px; /* Ajusta el ancho del selector según tus preferencias */
+  height: 30px; /* Ajusta la altura del selector según tus preferencias */
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin-left: 20px
+  /* Otros estilos personalizados que desees */
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Ajusta la altura según tus preferencias o necesidades */
+}
+
+.plot-axis {
+  font-size: 20px; /* Cambia el tamaño de fuente según tus preferencias */
+  color: #000000; /* Cambia el color de texto a uno que te guste */
+  margin-left: 20px;
+  margin-right: 5px
+}
+
+.plot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #2980b9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.plot-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.plot-axis {
+  font-size: 16px;
+  color: #3498db;
+}
+
+select {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+}
+
+.plot-graph {
+  margin-top: 20px;
+}
