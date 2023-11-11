@@ -15,8 +15,11 @@ const PlotComponent = ({ data, headers }) => {
 
   const layout = {
     title: 'Scatter Plot',
-    xaxis: { title: selectedX },
-    yaxis: { title: selectedY },
+    xaxis: { title: selectedX, titlepad: 30},
+    yaxis: { title: selectedY, titlepad: 30 },
+    width: 1200, // Ajusta el ancho del gráfico
+    height: 600, // Ajusta la altura del gráfico
+    autosize: true, // Activa el ajuste automático del tamaño
   };
 
   const handleXChange = (e) => {
@@ -28,28 +31,33 @@ const PlotComponent = ({ data, headers }) => {
   };
 
   return (
-    <div>
-      <label>X-axis:</label>
-      <select value={selectedX} onChange={handleXChange}>
-        {headers.map((header) => (
-          <option key={header} value={header}>
-            {header}
-          </option>
-        ))}
-      </select>
+    <div className="plot-container">
+      <div className="plot-controls">
+        <label className='plot-axis'>X-axis:</label>
+        <select value={selectedX} onChange={handleXChange}>
+          {headers.map((header) => (
+            <option key={header} value={header}>
+              {header}
+            </option>
+          ))}
+        </select>
 
-      <label>Y-axis:</label>
-      <select value={selectedY} onChange={handleYChange}>
-        {headers.map((header) => (
-          <option key={header} value={header}>
-            {header}
-          </option>
-        ))}
-      </select>
+        <label className='plot-axis'>Y-axis:</label>
+        <select value={selectedY} onChange={handleYChange}>
+          {headers.map((header) => (
+            <option key={header} value={header}>
+              {header}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <Plot data={[trace]} layout={layout} />
+      <div className="plot-graph">
+        <Plot data={[trace]} layout={layout} />
+      </div>
     </div>
   );
 };
+
 
 export default PlotComponent;
