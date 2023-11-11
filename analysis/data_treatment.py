@@ -40,7 +40,7 @@ def count_values_in_column(dataframe, column_name):
 
     return value_counts_dict
 
-def count_products_by_year(dataframe):
+def count_purchases_by_year(dataframe):
     """
     Count the occurrences of the last two digits of "FECHAPEDIDO" for each unique "CODIGO" value.
 
@@ -119,10 +119,11 @@ def print_unique_pairs(dataframe, column1, column2):
     print(unique_pairs)
 
 def main():
-    file_path = 'consumo_material_clean.xlsx'
+    file_path = 'consumo_material_clean.xlsx' #modified_dataset.xlsx
+    file_path = 'modified_dataset.xlsx' #consumo_material_clean.xlsx
     dataframe = read_excel_dataset(file_path, sheet_name='Sheet1')
     # print(dataframe)
-    new_df = count_products_by_year(dataframe)
+    new_df = count_purchases_by_year(dataframe)
     # print_unique_values(dataframe, "CODIGO")
 
     print(new_df)
