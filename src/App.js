@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import DataLoader from './components/DataLoader';
 import PlotComponent from './components/PlotComponent';
+import './App.css'
 
 const App = () => {
   const [plotData, setPlotData] = useState([]);
@@ -14,6 +15,9 @@ const App = () => {
 
   return (
     <div>
+      <div>
+      <h1 className="title">Analyzer</h1>
+      </div>
       <DataLoader onDataLoad={handleDataLoad} />
       <PlotComponent data={plotData} headers={plotHeaders} />
     </div>

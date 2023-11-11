@@ -44,14 +44,20 @@ const DataLoader = ({ onDataLoad }) => {
 
   return (
     <div>
+      <div>
+      <h1 className="title-load-dataset">Load your dataset</h1>
+      </div>
       <Select
+        className='file-selector'
         options={fileOptions}
         value={selectedFile}
         onChange={(value) => setSelectedFile(value)}
         isSearchable
         placeholder="Select a file"
       />
-      <button onClick={loadFile}>Load Data</button>
+      <button 
+      className='button-load-data'
+      onClick={loadFile}>Load Data</button>
     </div>
   );
 };

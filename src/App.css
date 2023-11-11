@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+
+.button-load-data{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Cambia el color de fondo a uno que te guste */
+  color: #fff; /* Cambia el color del texto a blanco o uno que prefieras */
+  border: none;
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición de color de fondo suave al pasar el mouse */
+  margin-top: 20px;
+  margin-left: 20px
+}
+.button-load-data:hover {
+  background-color: #2980b9; /* Cambia el color de fondo cuando se pasa el mouse */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 50px; /* Cambia el tamaño de fuente según tus preferencias */
+  color: #3498db; /* Cambia el color de texto a uno que te guste */
+  text-align: center; /* Centra el texto horizontalmente */
+  /* Otros estilos personalizados que desees */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-load-dataset {
+  font-size: 30px; /* Cambia el tamaño de fuente según tus preferencias */
+  color: #3498db; /* Cambia el color de texto a uno que te guste */
+  margin-left: 20px
+  /* Otros estilos personalizados que desees */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.file-selector {
+  width: 200px; /* Ajusta el ancho del selector según tus preferencias */
+  height: 30px; /* Ajusta la altura del selector según tus preferencias */
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin-left: 20px
+  /* Otros estilos personalizados que desees */
+}
+
+.centered-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: flex-start;
+  min-height: 100vh; /* Ajusta la altura según tus preferencias o necesidades */
 }
