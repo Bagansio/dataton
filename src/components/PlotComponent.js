@@ -9,6 +9,7 @@ const PlotComponent = ({ data, headers }) => {
   const [thirdHeaderOptions, setThirdHeaderOptions] = useState([]);
   const [filteredData, setFilteredData] = useState(data);
   const [isZModeEnabled, setZModeEnabled] = useState(true); // Initial state: Z mode enabled
+  const [selectedMode, setSelectedMode] = useState('markers'); // Initial state: scatter mode
 
   useEffect(() => {
     // Filter out selected headers from available headers to get the third header options
@@ -43,7 +44,7 @@ const PlotComponent = ({ data, headers }) => {
     const trace = {
       x: filteredData.map((row) => row[headers.indexOf(selectedX)]),
       y: filteredData.map((row) => row[headers.indexOf(selectedY)]),
-      mode: 'markers',
+      mode: selectedMode,
       type: 'scatter',
       name: selectedZ,
     };
@@ -55,7 +56,7 @@ const PlotComponent = ({ data, headers }) => {
       const trace = {
         x: subsetData.map((row) => row[headers.indexOf(selectedX)]),
         y: subsetData.map((row) => row[headers.indexOf(selectedY)]),
-        mode: 'markers',
+        mode: selectedMode,
         type: 'scatter',
         name: option,
       };
@@ -64,7 +65,6 @@ const PlotComponent = ({ data, headers }) => {
   }
 
   const layout = {
-    title: 'Scatter Plot',
     xaxis: { title: selectedX, titlepad: 30 },
     yaxis: { title: selectedY, titlepad: 30 },
     width: 1200,
@@ -87,6 +87,10 @@ const PlotComponent = ({ data, headers }) => {
 
   const handleToggleZMode = () => {
     setZModeEnabled(!isZModeEnabled);
+  };
+
+  const handleModeChange = (e) => {
+    setSelectedMode(e.target.value);
   };
 
   return (
@@ -125,6 +129,13 @@ const PlotComponent = ({ data, headers }) => {
             </button>
           </>
         )}
+
+        <label className='plot-axis'>Mode:</label>
+        <select value={selectedMode} onChange={handleModeChange}>
+          <option value="markers">Markers</option>
+          <option value="lines">Lines</option>
+          <option value="lines+markers">Lines + Markers</option>
+        </select>
       </div>
 
       <div className="plot-graph">
