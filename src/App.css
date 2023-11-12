@@ -16,6 +16,21 @@
   background-color: #2980b9; /* Cambia el color de fondo cuando se pasa el mouse */
 }
 
+.button{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Cambia el color de fondo a uno que te guste */
+  color: #fff; /* Cambia el color del texto a blanco o uno que prefieras */
+  border: none;
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición de color de fondo suave al pasar el mouse */
+}
+.button:hover {
+  background-color: #2980b9; /* Cambia el color de fondo cuando se pasa el mouse */
+}
+
 .title {
   font-size: 50px; /* Cambia el tamaño de fuente según tus preferencias */
   color: #3498db; /* Cambia el color de texto a uno que te guste */

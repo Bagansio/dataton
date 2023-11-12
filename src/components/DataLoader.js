@@ -7,9 +7,13 @@ const DataLoader = ({ onDataLoad }) => {
   const fileInputRef = useRef(null);
 
   const fileOptions = [
-    { value: 'modified_dataset.xlsx', label: 'Dataset 1' },
-    { value: 'file2.xlsx', label: 'File 2' },
-    { value: 'file3.xlsx', label: 'File 3' },
+    { value: 'codigo_origen_df.xlsx', label: 'Code - Origin' },
+    { value: 'hospital_year_purchases.xlsx', label: 'Hospital year - Purchases' },
+    { value: 'year_money.xlsx', label: 'Year - Money' },
+    { value: 'year_purchases.xlsx', label: 'Year - Purchase' },
+    { value: 'year_tipo_average.xlsx', label: 'Year - Average type' },
+    { value: 'year_tipo.xlsx', label: 'Year - Type' },
+
     // Add more files as needed
   ];
 
